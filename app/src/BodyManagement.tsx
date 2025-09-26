@@ -41,7 +41,7 @@ export default function BodyManagement() {
     { key: 1, label: '今日计划' },
     { key: 2, label: '减脂' },
     { key: 3, label: '增肌' },
-    { key: 4, label: '软开' },
+    { key: 4, label: '柔韧性' },
     { key: 5, label: '体态' },
     { key: 6, label: '资料' }
   ];
@@ -83,7 +83,7 @@ export default function BodyManagement() {
       ]
     },
     4: {
-      title: '软开度训练',
+      title: '柔韧性',
       content: [
         {
           type: '瑜伽',
