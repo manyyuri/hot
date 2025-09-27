@@ -20,7 +20,7 @@ export default function BodyManagement() {
   const [currentMenu, setCurrentMenu] = useState<number>(1);
 
   const menuItems: MenuItem[] = [
-    { key: 1, label: '今日计划' },
+    { key: 1, label: '训练' },
     { key: 2, label: '减脂' },
     { key: 3, label: '增肌' },
     { key: 4, label: '柔韧性' },
