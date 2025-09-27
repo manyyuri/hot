@@ -1,6 +1,6 @@
 "use client"
 import { useState } from 'react';
-import { Menu, Typography } from 'antd';
+import { Tag, Typography, Space } from 'antd';
 import Schedule from './pages/TodayPlan';
 import LowerFat from './pages/FatLoss';
 import MoreMuscle from './pages/MuscleBuilding';
@@ -29,8 +29,8 @@ export default function BodyManagement() {
   ];
 
 
-  const handleMenuClick = (e: { key: string }) => {
-    setCurrentMenu(parseInt(e.key));
+  const handleTagClick = (key: number) => {
+    setCurrentMenu(key);
   };
 
   const renderContent = () => {
@@ -55,17 +55,23 @@ export default function BodyManagement() {
   return (
     <div style={{ padding: '20px' }}>
       <Title level={1}>HOT</Title>
-      <Menu 
-        mode="horizontal" 
-        defaultSelectedKeys={['1']}
-        selectedKeys={[currentMenu.toString()]}
-        items={menuItems.map(item => ({
-          key: item.key.toString(),
-          label: item.label
-        }))}
-        onClick={handleMenuClick}
-        style={{ marginBottom: 20 }}
-      />
+      <Space wrap style={{ marginBottom: 20 }}>
+        {menuItems.map(item => (
+          <Tag
+            key={item.key}
+            color={currentMenu === item.key ? 'blue' : 'default'}
+            style={{ 
+              cursor: 'pointer',
+              padding: '4px 12px',
+              fontSize: '14px',
+              borderRadius: '6px'
+            }}
+            onClick={() => handleTagClick(item.key)}
+          >
+            {item.label}
+          </Tag>
+        ))}
+      </Space>
       
       {renderContent()}
     </div>
