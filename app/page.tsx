@@ -1,8 +1,7 @@
-import { Menu } from "antd";
-import BodyManagement from "./src/BodyManagement";
+import Container from "./src/Container";
 
 export default function Home() {
   return (
-    <BodyManagement/>
+    <Container/>
   );
 }
