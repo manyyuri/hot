@@ -7,6 +7,7 @@ import MoreMuscle from './pages/MuscleBuilding';
 import Flexibility from './pages/Flexibility';
 import Posture from './pages/Posture';
 import Materials from './pages/Materials';
+import Charts from './pages/Charts';
 
 const { Title } = Typography;
 
@@ -25,7 +26,9 @@ export default function BodyManagement() {
     { key: 3, label: '增肌' },
     { key: 4, label: '柔韧性' },
     { key: 5, label: '体态' },
-    { key: 6, label: '资料' }
+    { key: 6, label: '数据分析' },
+    { key: 7, label: '资料' }
+    
   ];
 
 
@@ -45,7 +48,9 @@ export default function BodyManagement() {
         return <Flexibility />;
       case 5:
         return <Posture />;
-      case 6:
+        case 6:
+        return <Charts />;
+      case 7:
         return <Materials />;
       default:
         return <Schedule />;
