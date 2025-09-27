@@ -33,36 +33,8 @@ export default function Schedule() {
   return (
     <div style={{ marginTop: 20 }}>
       <Title level={2}>今日训练计划</Title>
-      <Row gutter={[16, 16]}>
-        <Col xs={24} lg={12}>
-          <Card 
-            title={scheduleData.type} 
-            variant={'borderless'}
-            style={{ height: '100%' }}
-          >
-            <Paragraph>{scheduleData.description}</Paragraph>
-            
-            <div>
-              <Title level={4}>训练内容</Title>
-              <ul>
-                {scheduleData.exercises.map((exercise, index) => (
-                  <li key={index}>
-                    {exercise.name}
-                    {exercise.sets && ` - ${exercise.sets}`}
-                    {exercise.reps && ` × ${exercise.reps}`}
-                    {exercise.duration && ` (${exercise.duration})`}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <Title level={4}>训练建议</Title>
-              <p>时长：{scheduleData.duration}</p>
-            </div>
-          </Card>
-        </Col>
-      </Row>
+     柔韧性每天都有
+     力量和有氧间隔着来
     </div>
   );
 }

@@ -54,7 +54,7 @@ export default function BodyManagement() {
 
   return (
     <div style={{ padding: '20px' }}>
-      <Title level={1}>身材管理</Title>
+      <Title level={1}>HOT</Title>
       <Menu 
         mode="horizontal" 
         defaultSelectedKeys={['1']}
