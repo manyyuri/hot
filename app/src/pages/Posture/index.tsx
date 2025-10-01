@@ -12,8 +12,6 @@ export default function Posture() {
 
   return (
     <div style={{ marginTop: 20 }}>
-      <Title level={2}>体态矫正训练</Title>
-      <Paragraph>PBT 搭配芭蕾基训。</Paragraph>
       <VideoList items={videos} />
     </div>
   );
