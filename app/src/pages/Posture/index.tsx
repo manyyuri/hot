@@ -1,21 +1,20 @@
 "use client"
-import { Card, Row, Col, Typography } from 'antd';
+import { useMemo } from 'react';
+import { Typography } from 'antd';
+import VideoList, { VideoListItem } from '../../VideoList';
 
 const { Title, Paragraph } = Typography;
 
-interface PostureContent {
-  type: string;
-  description: string;
-  benefits: string[];
-  exercises: string[];
-  frequency: string;
-}
-
 export default function Posture() {
+  const videos: VideoListItem[] = useMemo(() => ([
+    { id: 'p1', title: '【回归的美丽芭蕾：芭蕾舞剧《珠宝改编》，绿宝石篇，紧致全身，优美仪态】', cover: '/vercel.svg', url: 'https://www.bilibili.com/video/BV1wt411q75V/' },
+  ]), []);
+
   return (
     <div style={{ marginTop: 20 }}>
       <Title level={2}>体态矫正训练</Title>
-      PBT 搭配芭蕾基训
+      <Paragraph>PBT 搭配芭蕾基训。</Paragraph>
+      <VideoList items={videos} />
     </div>
   );
 }
