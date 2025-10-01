@@ -8,6 +8,7 @@ import Flexibility from './pages/Flexibility';
 import Posture from './pages/Posture';
 import Materials from './pages/Materials';
 import Charts from './pages/Charts';
+import Dance from './pages/Dance';
 
 const { Title } = Typography;
 
@@ -22,6 +23,7 @@ export default function BodyManagement() {
 
   const menuItems: MenuItem[] = [
     { key: 1, label: '训练' },
+    { key: 8, label: '练舞' },
     { key: 2, label: '减脂' },
     { key: 3, label: '增肌' },
     { key: 4, label: '柔韧性' },
@@ -52,6 +54,8 @@ export default function BodyManagement() {
         return <Charts />;
       case 7:
         return <Materials />;
+      case 8:
+          return <Dance />;
       default:
         return <Schedule />;
     }
