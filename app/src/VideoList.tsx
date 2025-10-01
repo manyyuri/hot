@@ -80,9 +80,11 @@ function VideoCard({ item }: { item: VideoListItem }) {
               </div>
             )}
           </div>
-          <Tag color="black" style={{ position: 'absolute', right: 8, bottom: 8, opacity: 0.85 }}>
-            {item.duration || '—'}
-          </Tag>
+          {item.duration && (
+            <Tag color="black" style={{ position: 'absolute', right: 8, bottom: 8, opacity: 0.85, pointerEvents: 'none' }}>
+              {item.duration}
+            </Tag>
+          )}
         </div>
       }
     >
